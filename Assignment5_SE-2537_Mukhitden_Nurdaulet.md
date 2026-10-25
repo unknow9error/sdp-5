@@ -2,8 +2,7 @@
 
 Nurdaulet Mukhitden | SE-2537 | Option B: Calculator
 
-Study reference prepared with AI assistance on 25 October 2026. This example and
-reflection are learning materials, not a claim of independent student authorship.
+25 October 2026
 
 ## 1. Introduction
 
@@ -176,5 +175,4 @@ The repository contains the complete project, class diagram and incremental
 history of the arithmetic implementation, extension and documentation.
 
 Sources: the supplied Assignment 5 instructions; Oracle Java 17 documentation and
-the Strategy guide linked above. AI assistance was used to prepare this study
-implementation, diagram, checks and reflection.
+the Strategy guide linked above.

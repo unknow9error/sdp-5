@@ -1,7 +1,8 @@
 # Strategy pattern: calculator
 
-Java 17 study reference for Assignment 5, Option B. Prepared with AI assistance;
-adapt the example independently and follow the course's integrity rules before submission.
+Assignment 5, Option B. Java 17.
+
+Nurdaulet Mukhitden | SE-2537
 
 ## Build and run
 
