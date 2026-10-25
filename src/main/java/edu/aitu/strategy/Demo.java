@@ -16,6 +16,8 @@ public final class Demo {
         printResult("Subtraction", calculator, left, right);
         calculator.setOperation(new MultiplyStrategy());
         printResult("Multiplication", calculator, left, right);
+        calculator.setOperation(new MaximumStrategy());
+        printResult("Maximum (new strategy)", calculator, left, right);
     }
 
     private static void printResult(String label, Calculator calculator,

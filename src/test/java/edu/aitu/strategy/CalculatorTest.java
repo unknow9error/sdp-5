@@ -27,6 +27,9 @@ public final class CalculatorTest {
 
         Calculator custom = new Calculator((left, right) -> left.max(right));
         assertValue("independent strategy via contract", "8", custom, "3", "8");
+        calculator.setOperation(new MaximumStrategy());
+        assertValue("new concrete strategy", "-2", calculator, "-9", "-2");
+        assertValue("equal maximum operands", "4", calculator, "4", "4.00");
         System.out.println("PASS: " + checks + " behavior checks");
     }
 
