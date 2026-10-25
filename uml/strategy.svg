@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="680" viewBox="0 0 1360 680">
+  <defs>
+    <marker id="realizes" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="white" stroke="#26384c"/></marker>
+    <marker id="uses" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L10 6L1 11" fill="none" stroke="#26384c"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#172d43;font-size:16px}.title{font-size:19px;font-weight:bold}.note{font-size:14px}.box{fill:white;stroke:#26384c;stroke-width:1.5}.line{fill:none;stroke:#26384c;stroke-width:1.5}.dash{stroke-dasharray:7 5}</style>
+  </defs>
+  <rect width="1360" height="680" fill="white"/>
+  <text x="36" y="32" class="title">Calculator: Strategy class diagram</text>
+  <rect class="box" x="36" y="67" width="570" height="126"/>
+  <text x="321" y="92" text-anchor="middle">&#171;interface&#187;</text>
+  <text x="321" y="117" text-anchor="middle" class="title">Operation</text>
+  <path class="line" d="M36 130H606"/>
+  <text x="50" y="159">+ apply(left: BigDecimal, right: BigDecimal): BigDecimal</text>
+  <rect class="box" x="720" y="67" width="600" height="177"/>
+  <text x="1020" y="98" text-anchor="middle" class="title">Calculator (Context)</text>
+  <path class="line" d="M720 112H1320M720 151H1320"/>
+  <text x="734" y="138">- operation: Operation</text>
+  <text x="734" y="177">+ Calculator(operation: Operation)</text>
+  <text x="734" y="202">+ setOperation(operation: Operation): void</text>
+  <text x="734" y="227">+ calculate(left: BigDecimal, right: BigDecimal): BigDecimal</text>
+  <path class="line" d="M720 135H606" marker-end="url(#uses)"/>
+  <text x="655" y="109" text-anchor="middle" class="note">delegates (1)</text>
+  <rect class="box" x="36" y="323" width="286" height="83"/>
+  <rect class="box" x="362" y="323" width="286" height="83"/>
+  <rect class="box" x="688" y="323" width="286" height="83"/>
+  <rect class="box" x="1014" y="323" width="306" height="83"/>
+  <path class="line" d="M36 365H322M362 365H648M688 365H974M1014 365H1320"/>
+  <text class="title" x="179" y="350" text-anchor="middle">AddStrategy</text>
+  <text class="title" x="505" y="350" text-anchor="middle">SubtractStrategy</text>
+  <text class="title" x="831" y="350" text-anchor="middle">MultiplyStrategy</text>
+  <text class="title" x="1167" y="350" text-anchor="middle">MaximumStrategy</text>
+  <text x="50" y="392">+ apply(left, right): BigDecimal</text>
+  <text x="376" y="392">+ apply(left, right): BigDecimal</text>
+  <text x="702" y="392">+ apply(left, right): BigDecimal</text>
+  <text x="1028" y="392">+ apply(left, right): BigDecimal</text>
+  <path class="line dash" d="M179 323V265H160V193" marker-end="url(#realizes)"/>
+  <path class="line dash" d="M505 323V265H300V193" marker-end="url(#realizes)"/>
+  <path class="line dash" d="M831 323V282H445V193" marker-end="url(#realizes)"/>
+  <path class="line dash" d="M1167 323V298H580V193" marker-end="url(#realizes)"/>
+  <rect class="box" x="462" y="526" width="432" height="88"/>
+  <text class="title" x="678" y="557" text-anchor="middle">Demo (Client)</text>
+  <path class="line" d="M462 570H894"/>
+  <text x="483" y="597">+ main(args: String[]): void</text>
+  <path class="line dash" d="M500 526L179 406" marker-end="url(#uses)"/>
+  <path class="line dash" d="M600 526L505 406" marker-end="url(#uses)"/>
+  <path class="line dash" d="M750 526L831 406" marker-end="url(#uses)"/>
+  <path class="line dash" d="M850 526L1167 406" marker-end="url(#uses)"/>
+  <text x="673" y="463" text-anchor="middle" class="note">creates concrete strategies</text>
+  <path class="line dash" d="M894 572H1340V263H1020V244" marker-end="url(#uses)"/>
+  <text x="1210" y="605" text-anchor="middle" class="note">configures Context</text>
+  <text x="36" y="657" class="note">Dashed hollow triangle: interface realization. Open arrow: association / dashed dependency.</text>
+</svg>

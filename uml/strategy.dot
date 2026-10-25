@@ -1,0 +1,23 @@
+digraph Strategy {
+  graph [rankdir=BT, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.7"];
+  node [shape=record, fontname="Arial", fontsize=12, color="#233347", margin="0.12"];
+  edge [fontname="Arial", fontsize=10, color="#233347"];
+  Operation [label="\<\<interface\>\>\nOperation|+ apply(left: BigDecimal, right: BigDecimal): BigDecimal"];
+  Calculator [label="Calculator|- operation: Operation|+ Calculator(operation: Operation)\l+ setOperation(operation: Operation): void\l+ calculate(left: BigDecimal, right: BigDecimal): BigDecimal\l"];
+  AddStrategy [label="AddStrategy|+ apply(left, right): BigDecimal"];
+  SubtractStrategy [label="SubtractStrategy|+ apply(left, right): BigDecimal"];
+  MultiplyStrategy [label="MultiplyStrategy|+ apply(left, right): BigDecimal"];
+  MaximumStrategy [label="MaximumStrategy|+ apply(left, right): BigDecimal"];
+  Demo [label="Demo (Client)|+ main(args: String[]): void"];
+  {rank=same; AddStrategy; SubtractStrategy; MultiplyStrategy; MaximumStrategy;}
+  AddStrategy -> Operation [arrowhead=empty, style=dashed];
+  SubtractStrategy -> Operation [arrowhead=empty, style=dashed];
+  MultiplyStrategy -> Operation [arrowhead=empty, style=dashed];
+  MaximumStrategy -> Operation [arrowhead=empty, style=dashed];
+  Calculator -> Operation [label="delegates to (1)", arrowhead=open, constraint=false];
+  Demo -> Calculator [label="configures", style=dashed, arrowhead=open];
+  Demo -> AddStrategy [style=dashed, arrowhead=open, label="creates"];
+  Demo -> SubtractStrategy [style=dashed, arrowhead=open];
+  Demo -> MultiplyStrategy [style=dashed, arrowhead=open];
+  Demo -> MaximumStrategy [style=dashed, arrowhead=open];
+}
