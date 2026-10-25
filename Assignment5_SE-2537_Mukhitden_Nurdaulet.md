@@ -170,9 +170,10 @@ strategy, null rejection and state preservation after a rejected replacement.
 
 ## 6. GitHub repository
 
-Pending: the owner must provide the destination repository URL before publication.
-The complete project and incremental commit history are available in this local
-project folder.
+[github.com/unknow9error/sdp-5](https://github.com/unknow9error/sdp-5)
+
+The repository contains the complete project, class diagram and incremental
+history of the arithmetic implementation, extension and documentation.
 
 Sources: the supplied Assignment 5 instructions; Oracle Java 17 documentation and
 the Strategy guide linked above. AI assistance was used to prepare this study
